@@ -16,34 +16,46 @@ const DATA = [
   {
     id: "bd7acbea-c1b1-46c2-aed5-3ad53abb28ba",
     title: "Voice command",
-    description: ['This will enable Speech recognition'],
-    notification:'Are you sure you would like to enable this setting?'
+    description: ["This will enable Speech recognition"],
+    notification: "Are you sure you would like to enable this setting?",
   },
   {
     id: "3ac68afc-c605-48d3-a4f8-fbd91aa97f63",
     title: "Enlarge Screen Size",
-    description: ['This will enlarge the text, images & buttons.',],
-    notification:'Are you sure you would like to enable this setting?'
+    description: ["This will enlarge the text, images & buttons."],
+    notification: "Are you sure you would like to enable this setting?",
   },
   {
     id: "58694a0f-3da1-471f-bd96-145571e29d72",
     title: "Monochrome",
-    description: ['This will apply a gray scale over the screens.' , ],
-    notification:'Are you sure you would like to enable this setting?'
+    description: ["This will apply a gray scale over the screens."],
+    notification: "Are you sure you would like to enable this setting?",
+  },
+  {
+    id: "3ac68afc-c605-48d3-a4f8-fbd91aa97f69",
+    title: "Text Reader",
+    description: ["This will turn written text to speech."],
+    notification: "Are you sure you would like to enable this setting?",
+  },
+  {
+    id: "58694a0f-3da1-471f-bd96-145571e29d59",
+    title: "Virtual Keyboard",
+    description: ["This will enable virtaul keyboard over the screen"],
+    notification: "Are you sure you would like to enable this setting?",
   },
 ];
 
-const Item = ({ item, onPress, img  , color , active}: any) => (
+const Item = ({ item, onPress, img, color, active }: any) => (
   <>
-  <TouchableOpacity onPress={onPress} style={[styles.VoiceCommands]}>
-    <Text style={[styles.Txt717]}>{item.title}</Text>
-    <View style={[styles.Toggle, color]}>{img}</View>
-  </TouchableOpacity>
+    <TouchableOpacity onPress={onPress} style={[styles.VoiceCommands]}>
+      <Text style={[styles.Txt717]}>{item.title}</Text>
+      <View style={[styles.Toggle, color]}>{img}</View>
+    </TouchableOpacity>
     {active}
   </>
 );
 
-const Drop = ({active}:any) => {
+const Drop = ({ active }: any) => {
   const [selectedId, setSelectedId] = useState(null);
 
   const renderItem = ({ item }: any) => {
@@ -64,28 +76,28 @@ const Drop = ({active}:any) => {
         />
       );
     const color = item.id === selectedId ? styles.On : styles.Off;
-    const active = item.id === selectedId ?
-    <View style={styles.prev}>
-    
-    { item.description.map((e:any)=><Text style={styles.prevTxt}>
-      {e}
-    </Text>)
-    }
-    <br />
-    <Text style={styles.prevTxt}>
-    {item.notification}
-
-    </Text>
-    <Pressable style={[styles.prevBtn ]}>
-      PREVIEW
-      </Pressable>
-    </View> 
-    :null
+    const active =
+      item.id === selectedId ? (
+        <View style={styles.prev}>
+          {item.description.map((e: any) => (
+            <Text style={styles.prevTxt}>{e}</Text>
+          ))}
+          <br />
+          <Text style={styles.prevTxt}>{item.notification}</Text>
+          <Pressable style={[styles.prevBtn]}>PREVIEW</Pressable>
+        </View>
+      ) : null;
     return (
-      <Item item={item} onPress={() => setSelectedId(item.id)} img={img} color={color} active={active} />
+      <Item
+        item={item}
+        onPress={() => setSelectedId(item.id)}
+        img={img}
+        color={color}
+        active={active}
+      />
     );
   };
-  
+
   return (
     <SafeAreaView style={styles.container} nativeID="77">
       <View style={styles.AccessibilityMenuOptions}>
@@ -104,9 +116,9 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     marginTop: StatusBar.currentHeight || 0,
-    zIndex:1,
-    position:'absolute',
-    top:'88px'
+    zIndex: 1,
+    position: "absolute",
+    top: "88px",
   },
   item: {
     padding: 20,
@@ -301,39 +313,39 @@ const styles = StyleSheet.create({
     width: "50px",
     height: "25px",
   },
-  prev:{
-    backgroundColor: '#efd5a9',
-    height: '218px',
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    paddingLeft: '17px',
-    paddingRight: '17px',
+  prev: {
+    backgroundColor: "#efd5a9",
+    height: "218px",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    paddingLeft: "17px",
+    paddingRight: "17px",
   },
-  prevTxt:{
-    color: '#000000',
-    width: '326px',
+  prevTxt: {
+    color: "#000000",
+    width: "326px",
     fontSize: 16,
-    fontWeight: '400',
+    fontWeight: "400",
     letterSpacing: -0.27,
   },
-  prevBtn:{
-    color: '#fefffb',
+  prevBtn: {
+    color: "#fefffb",
     fontSize: 18,
-    fontWeight: '700',
-    backgroundColor: '#356c27',
-    width: '327px',
-    height: '53px',
-    alignSelf: 'stretch',
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'center',
-    paddingTop: '7.5px',
-    paddingBottom: '7.5px',
+    fontWeight: "700",
+    backgroundColor: "#356c27",
+    width: "327px",
+    height: "53px",
+    alignSelf: "stretch",
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "center",
+    paddingTop: "7.5px",
+    paddingBottom: "7.5px",
     borderRadius: 3,
-    alignItems:'center',
-    padding:5
-  }
+    alignItems: "center",
+    padding: 5,
+  },
 });
 
 export default Drop;
