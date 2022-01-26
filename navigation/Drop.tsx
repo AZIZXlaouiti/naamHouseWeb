@@ -17,31 +17,26 @@ const DATA = [
     id: "bd7acbea-c1b1-46c2-aed5-3ad53abb28ba",
     title: "Voice command",
     description: ["This will enable Speech recognition"],
-    notification: "Are you sure you would like to enable this setting?",
   },
   {
     id: "3ac68afc-c605-48d3-a4f8-fbd91aa97f63",
     title: "Enlarge Screen Size",
     description: ["This will enlarge the text, images & buttons."],
-    notification: "Are you sure you would like to enable this setting?",
   },
   {
     id: "58694a0f-3da1-471f-bd96-145571e29d72",
     title: "Monochrome",
     description: ["This will apply a gray scale over the screens."],
-    notification: "Are you sure you would like to enable this setting?",
   },
   {
     id: "3ac68afc-c605-48d3-a4f8-fbd91aa97f69",
     title: "Text Reader",
     description: ["This will turn written text to speech."],
-    notification: "Are you sure you would like to enable this setting?",
   },
   {
     id: "58694a0f-3da1-471f-bd96-145571e29d59",
     title: "Virtual Keyboard",
     description: ["This will enable virtaul keyboard over the screen"],
-    notification: "Are you sure you would like to enable this setting?",
   },
 ];
 
@@ -83,7 +78,7 @@ const Drop = ({ active }: any) => {
             <Text style={styles.prevTxt}>{e}</Text>
           ))}
           <br />
-          <Text style={styles.prevTxt}>{item.notification}</Text>
+          {/* <Text style={styles.prevTxt}>{item.notification}</Text> */}
           <Pressable style={[styles.prevBtn]}>PREVIEW</Pressable>
         </View>
       ) : null;
