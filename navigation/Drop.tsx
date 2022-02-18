@@ -129,27 +129,27 @@ const styles = StyleSheet.create({
   },
   On: {
     backgroundColor: "#92b53d",
-    borderWidth: "2px",
-    borderColor: "#0c0b37",
-    borderStyle: "solid",
+    borderWidth: 2,
+    borderColor: "'#0c0b37'",
+    borderStyle: "'solid'",
     width: "46.3px",
     display: "flex",
     flexDirection: "row",
     justifyContent: "flex-end",
     gap: 0,
-    borderRadius: "30.6px",
+    borderRadius: 30.6,
   },
   Off: {
     backgroundColor: "#c4c4c4",
     borderColor: "#5d5d5d",
-    borderWidth: "2px",
+    borderWidth: 2,
     borderStyle: "solid",
     width: "46.3px",
     display: "flex",
     flexDirection: "row",
     justifyContent: "flex-start",
     gap: 0,
-    borderRadius: "30.6px",
+    borderRadius: 30.6,
   },
 
   AccessibilityMenuOptions: {
@@ -341,6 +341,20 @@ const styles = StyleSheet.create({
     alignItems: "center",
     padding: 5,
   },
+  Header2:{
+    backgroundColor: '#0c0b37',
+    height: '79px',
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    display: 'flex',
+    flexDirection: 'column',
+    paddingTop: 13,
+    paddingBottom: 18,
+    paddingLeft: 24,
+    paddingRight: 23,
+  }
 });
 
 export default Drop;
+
