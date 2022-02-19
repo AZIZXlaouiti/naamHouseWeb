@@ -10,6 +10,7 @@ import {
 } from "react-native";
 import Drop from "../navigation/Drop";
 import DropDown from "../navigation/DropDown";
+import Nav from "../navigation/Nav";
 
 const DATA = [
   {
@@ -450,7 +451,7 @@ const [active , setActive] = React.useState(false)
               </Text>
           </View>
         </View>
-
+         <Nav/>
 
     </View>
   );
