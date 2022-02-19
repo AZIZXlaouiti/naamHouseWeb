@@ -8,6 +8,7 @@ import {
   Button,
   Pressable,
 } from "react-native";
+import { SvgUri } from "react-native-svg";
 import Drop from "../navigation/Drop";
 import DropDown from "../navigation/DropDown";
 import Nav from "../navigation/Nav";
@@ -394,10 +395,15 @@ const [active , setActive] = React.useState(false)
         <View style={styles.Onboardingcontent}>
             <View style={styles.ctx}>
             <Text style={styles.Txt839}>WELCOME</Text>
+            {/* <SvgUri
+    width="100%"
+    height="100%"
+    uri="http://thenewcode.com/assets/images/thumbnails/homer-simpson.svg"
+  /> */}
             <Image
               style={styles.Iconholder}
               source={{
-                uri: "https://user-images.githubusercontent.com/79036942/150857930-04daa3f2-3e83-44a3-b480-1730f16c6f46.png",
+                uri: "http://thenewcode.com/assets/images/thumbnails/homer-simpson.svg",
               }}
               />
               
