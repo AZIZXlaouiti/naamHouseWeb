@@ -1,1 +1,1 @@
-web: sh -c 'cd web-build && npx serve'
+web: npx serve web-build
