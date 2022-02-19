@@ -6,9 +6,11 @@ import React from 'react';
 const styles = StyleSheet.create({
   
   newRootRoot :{ 
+    width:'100%',
     height: "78px",
     position: "fixed",
     bottom: "0"
+  
   },
   propert10nProfile:{
     display: 'flex',
