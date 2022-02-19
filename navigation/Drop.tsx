@@ -112,7 +112,8 @@ const styles = StyleSheet.create({
     flex: 1,
     marginTop: StatusBar.currentHeight || 0,
     zIndex: 1,
-    position: "absolute",
+    position: "fixed",
+    zIndex: 1,
     top: "88px",
   },
   item: {

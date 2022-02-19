@@ -5,7 +5,7 @@ import useCachedResources from './hooks/useCachedResources';
 import useColorScheme from './hooks/useColorScheme';
 import Navigation from './navigation';
 import Nav from './navigation/Nav';
-import Screen1 from './screens/Screen1';
+import Index from './screens/Index';
 
 export default function App() {
   const isLoadingComplete = useCachedResources();
@@ -15,7 +15,7 @@ export default function App() {
     return null;
   } else {
     return (
-      <Screen1/>
+      <Index/>
     );
   }
 }

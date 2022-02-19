@@ -79,7 +79,7 @@ const styles = StyleSheet.create({
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    marginBottom: "127px",
+    marginTop: "127px",
     justifyContent:'space-between'
   },
   Txt681: {
@@ -215,10 +215,10 @@ const styles = StyleSheet.create({
     zIndex: 0,
   },
   HeaderBar_1r: {
-    backgroundCOlor: "rgb(99, 54, 137)",
+    backgroundColor: "rgb(99, 54, 137)",
     borderBottomColor: "rgb(216, 216, 216)",
     borderBottomWidth: 1,
-    pointerEvents: " auto",
+    pointerEvents: "auto",
     flex: 1,
     webkitBoxAlign: "stretch",
     webkitBoxDirection: "normal",
@@ -238,7 +238,7 @@ const styles = StyleSheet.create({
     zIndex: 0,
   },
   Header: {
-    position: "relative",
+    position: "fixed",
     paddingTop: 12,
     paddingBottom: 17,
     paddingLeft: 23,
@@ -246,6 +246,8 @@ const styles = StyleSheet.create({
     backgroundColor: "rgba(12,11,55,1)",
     width: "100%",
     height: "88px",
+    zIndex: 1
+
   },
   Group724: {
     display: "flex",
@@ -330,11 +332,11 @@ const styles = StyleSheet.create({
   },
 });
 
-export default function Screen1() {
+export default function Index() {
 const [active , setActive] = React.useState(false)
 
   return (
-    <View style={styles.OnboardingScreenSlide1}>
+    <View style={styles.OnboardingScreenSlide1} >
 
 
         <View style={styles.Header}>
@@ -390,6 +392,35 @@ const [active , setActive] = React.useState(false)
 
         <View style={styles.Onboardingcontent}>
             <View style={styles.ctx}>
+            <Text style={styles.Txt839}>WELCOME</Text>
+            <Image
+              style={styles.Iconholder}
+              source={{
+                uri: "https://user-images.githubusercontent.com/79036942/150857930-04daa3f2-3e83-44a3-b480-1730f16c6f46.png",
+              }}
+              />
+              
+            <Text style={styles.Txt5310}>
+              The NAAM House app helps you help homeless veterans. Here are a
+              few ways...
+            </Text>
+              </View>
+            <View style={styles.Onboardingmenubreadcrumbs}>
+              <Text style={styles.Txt351}>Skip</Text>
+              <View style={styles.Frame}>
+              <View style={styles.Ellipse} />
+              <View style={styles.Ellipse} />
+              <View style={styles.Ellipse} />
+              <View style={styles.Ellipse} />
+              </View>
+              <Text style={styles.Txt154}>Next</Text>
+              </View>
+              <View style={styles.SignIntoAccount}>
+              <Text >
+              Already have an account? Sign in
+              </Text>
+          </View>
+          <View style={styles.ctx}>
             <Text style={styles.Txt839}>WELCOME</Text>
             <Image
               style={styles.Iconholder}
