@@ -451,8 +451,7 @@ const [active , setActive] = React.useState(false)
               </Text>
           </View>
         </View>
-         <Nav/>
-
+        <Nav/>
     </View>
   );
 }

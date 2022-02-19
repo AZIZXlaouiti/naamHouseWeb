@@ -6,10 +6,9 @@ import React from 'react';
 const styles = StyleSheet.create({
   
   newRootRoot :{ 
-     width:'100%',
-     height: 78,
-     flexDirection: 'column',
-     justifyContent: 'center'
+    height: "78px",
+    position: "fixed",
+    bottom: "0"
   },
   propert10nProfile:{
     display: 'flex',
@@ -159,6 +158,7 @@ export default function Nav() {
     return (
       <View
       style={styles.newRootRoot}
+      nativeID={'bottom-nav'}
     >
      <View
       style={styles.propert10nProfile}
